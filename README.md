@@ -94,11 +94,13 @@ Description: couldn't find main template
 ## Creating SLIs and SLOs
  We want to create an SLO guaranteeing that our application has a 99.95% uptime per month. Name four SLIs that you would use to measure the success of this SLO.
 
-we will use four golden metrics to insure our system is uptime 99.95% per month\
-1. latancy
-2. saturation
-3. traffic
-4. errors
+we will use four golden metrics to insure our system is uptime 99.95% per month
+
+SLIs:
+1. latancy: 95% of requests responce under 1 minute
+2. saturation: resources usage not exceed 70 % (meomery & CPU)
+3. traffic: no of successful requests per minute
+4. errors: errors not exceeds 0.05% per month 
 
 
 ## Building KPIs for our plan
