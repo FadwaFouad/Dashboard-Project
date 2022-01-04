@@ -3,7 +3,7 @@
 ## Verify the monitoring installation
  run kubectl command to show the running pods and services for all components. Take a screenshot of the output and include it here to verify the installation
 
-![1  monitoring all](https://user-images.githubusercontent.com/24944117/147992672-f9f473b1-028f-4d5e-aa73-9d46fe53af5f.png)
+![1  monitoring all](https://user-images.githubusercontent.com/24944117/148044196-255e06b5-7ed0-40fb-a26b-49635d4c2753.png)
 
 ## Setup the Jaeger and Prometheus source
 Expose Grafana to the internet and then setup Prometheus as a data source. Provide a screenshot of the home page after logging into Grafana.
@@ -126,6 +126,8 @@ d. errors
 
 ## Final Dashboard
  Create a Dashboard containing graphs that capture all the metrics of your KPIs and adequately representing your SLIs and SLOs. Include a screenshot of the dashboard here, and write a text description of what graphs are represented in the dashboard.  
-![final dashboard 1](https://user-images.githubusercontent.com/24944117/147993100-7fd9f7ec-ea26-4bc2-9535-9af2710f39c9.png)
 
-![final dashboard 2](https://user-images.githubusercontent.com/24944117/147993105-b04de943-5aea-4002-827a-8be48a5fcad9.png)
+![final dashboard 1](https://user-images.githubusercontent.com/24944117/148044203-6b942a03-9715-407e-bcb2-860deeba0a49.png)
+
+![final dashboard 2](https://user-images.githubusercontent.com/24944117/148044207-47578ccf-4662-4a78-a5d1-27973d6a09b1.png)
+
