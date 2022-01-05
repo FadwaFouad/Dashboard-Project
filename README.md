@@ -1,26 +1,30 @@
-**Note:** For the screenshots, you can store all of your answer images in the `answer-img` directory.
+**Cloud Native Observability:** 
+This project create dashboards that use multiple graphs to monitor the sample application that is deployed on a Kubernetes cluster. 
+The project use Prometheus, Jaeger, and Grafana in order to monitor, trace and visualize the application. 
 
-## Verify the monitoring installation
- run kubectl command to show the running pods and services for all components. Take a screenshot of the output and include it here to verify the installation
+
+## 1- Verify the monitoring installation
+ screenshot to verify the installation shows the running pods and services for all components.
 
 ![1  monitoring all](https://user-images.githubusercontent.com/24944117/148044196-255e06b5-7ed0-40fb-a26b-49635d4c2753.png)
 
 ## Setup the Jaeger and Prometheus source
-Expose Grafana to the internet and then setup Prometheus as a data source. Provide a screenshot of the home page after logging into Grafana.
+Expose Grafana to the internet and then setup Prometheus as a data source. The screenshot of the home page after logging into Grafana.
 
 ![2  grafana home](https://user-images.githubusercontent.com/24944117/147992783-91031eab-380c-439f-91e3-15956f2edf4b.png)
 
 ## Create a Basic Dashboard
- Create a dashboard in Grafana that shows Prometheus as a source. Take a screenshot and include it here.
+ Screenshot show dashboard in Grafana and use Prometheus as a source.
 ![3  prometheus datasource](https://user-images.githubusercontent.com/24944117/147992955-d4c58205-eb96-401e-b5f6-bc18e3cbdce6.png)
 
 ## Describe SLO/SLI
-Describe, in your own words, what the SLIs are, based on an SLO of *monthly uptime* and *request response time*.
+*Describtion  what the SLIs are, based on an SLO of *monthly uptime* and *request response time**.
 
 99% uptime of system per month.(all HTTP statuses will be 20x).
 99% of all requests will take less than 20ms in a given month (responce time).
 
-if we have these SLOs the SLIs should be metrics to measure  those SLOs (the level of performance) in a given time. It is ratio x/y (x: performance, y: specific time )
+if we have these SLOs the SLIs should be metrics to measure  those SLOs (the level of performance) in a given time. 
+It is ratio x/y (x: performance, y: specific time )
 
 Ex:
 -The average time taken to return a request during the month was 11 ms. (responce time).
@@ -28,7 +32,7 @@ Ex:
 
 
 ## Creating SLI metrics.
- It is important to know why we want to measure certain metrics for our customer. Describe in detail 5 metrics to measure these SLIs. 
+ It is important to know why we want to measure certain metrics for our customer. Describtion in detail 5 metrics to measure these SLIs. 
 
 *5 metrics* 
 1. average responce time per minute : to know how fast of system replaying to requests.
@@ -39,25 +43,26 @@ Ex:
 
 
 ## Create a Dashboard to measure our SLIs
-Create a dashboard to measure the uptime of the frontend and backend services We will also want to measure to measure 40x and 50x errors. Create a dashboard that show these values over a 24 hour period and take a screenshot.
+A dashboard to measure the uptime of the frontend and backend services,also  measure 40x and 50x errors. A screenshot for dashboard that show these values over a 24 hour period.
 
 ![4  SLIs](https://user-images.githubusercontent.com/24944117/147993035-6964450d-2a88-4ed0-a1b8-1e050d696dd9.png)
 
 
 ## Tracing our Flask App
- We will create a Jaeger span to measure the processes on the backend. Once you fill in the span, provide a screenshot of it here. Also provide a (screenshot) sample Python file containing a trace and span code used to perform Jaeger traces on the backend service.
-*Backend Jaeger*
+ create a Jaeger span to measure the processes on the backend and fill in the span,  the screenshot show backend span use Jaeger. 
+
 ![5  backend jaeger](https://user-images.githubusercontent.com/24944117/147993081-dda213f3-7707-4815-a5dd-a026734d239c.png)
 
-*Jaeger Code*
+screenshot show sample Python file containing a trace and span code used to perform Jaeger traces on the backend service.
+
 ![6  backend tracing code](https://user-images.githubusercontent.com/24944117/147993084-a84e0bf4-ed13-4017-a9cb-beebb9ff9f59.png)
 
 ## Jaeger in Dashboards
-Now that the trace is running, let's add the metric to our current Grafana dashboard. Once this is completed, provide a screenshot of it here.
+Now that the trace is running, let's add the metric to our current Grafana dashboard. Once this is completed,  a screenshot to show it.
 ![7  backend traincing dashboard](https://user-images.githubusercontent.com/24944117/147993090-c468da4d-23d9-4893-ad91-7cd41e3d8b91.png)
 
 ## Report Error
-Using the template below, write a trouble ticket for the developers, to explain the errors that you are seeing (400, 500, latency) and to let them know the file that is causing the issue also include a screenshot of the tracer span to demonstrate how we can user a tracer to locate errors easily.
+The trouble ticket for the developers, to explain the errors appear in code (400, 500, latency) with file that is causing the issue.and the screenshut show  the tracer span to demonstrate how a tracer use to locate errors easily.
 
 *TROUBLE TICKET 1*
 
@@ -92,9 +97,9 @@ Description: couldn't find main template
 ![9  homepage ticket](https://user-images.githubusercontent.com/24944117/147993096-7176b032-d9bd-4b2f-9eb9-7a1ba6ca8e99.png)
 
 ## Creating SLIs and SLOs
- We want to create an SLO guaranteeing that our application has a 99.95% uptime per month. Name four SLIs that you would use to measure the success of this SLO.
+  create an SLO guaranteeing that our application has a *99.95% uptime per month*. with four SLIs that  would use to measure the success of this SLO.
 
-we will use four golden metrics to insure our system is uptime 99.95% per month
+ useing four golden metrics to insure our system is uptime 99.95% per month
 
 SLIs:
 1. latancy: 95% of requests responce under 1 minute
@@ -104,7 +109,7 @@ SLIs:
 
 
 ## Building KPIs for our plan
-Now that we have our SLIs and SLOs, create a list of 2-3 KPIs to accurately measure these metrics as well as a description of why those KPIs were chosen. We will make a dashboard for this, but first write them down here.
+After SLIs and SLOs, this a  list of 2-3 KPIs to accurately measure these metrics as well as a description of why those KPIs was chosen. Screenshut show dashboard for this.
 
 A. latancy 
 1. no of traces , to know latacncy whitch affect system uptime
@@ -125,7 +130,7 @@ d. errors
 
 
 ## Final Dashboard
- Create a Dashboard containing graphs that capture all the metrics of your KPIs and adequately representing your SLIs and SLOs. Include a screenshot of the dashboard here, and write a text description of what graphs are represented in the dashboard.  
+ Final Dashboard containing graphs that capture all the metrics of your KPIs and adequately representing your SLIs and SLOs. The screenshot show the final dashboard, with text description of what graphs are represented in the dashboard.  
 
 ![final dashboard 1](https://user-images.githubusercontent.com/24944117/148044203-6b942a03-9715-407e-bcb2-860deeba0a49.png)
 
